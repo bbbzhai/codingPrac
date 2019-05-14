@@ -1,6 +1,6 @@
-#lvalue (reference) and rvalue (reference)
+# lvalue (reference) and rvalue (reference)
 
-##lvalue reference (or simply reference)
+## lvalue reference (or simply reference)
 
 int ival = 1024;
 int &refVal = ival; // refVal is another name for ival
