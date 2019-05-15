@@ -153,3 +153,68 @@ typedef unsigned long ulong;
 
 C++11:
 using SI = Sales_item; 
+
+
+
+
+## Type Inference
+
+Still don't understand fully, maybe will understand it in practice.
+
+### decltype
+
+* deduce the type from some expression.
+* Difference between decltype and auto
+	* `auto` works on types, and `decltype` works on expression
+* You shouldn't be seeing or using decltype in "day-to-day" programming. It is most useful in generic (templated) library code, where the expression in question is not known and depends on a paramater. (By contrast, auto may be used generously all over the place.) In short, if you're new to programming, you probably won't need to use decltype for some time.
+
+
+### auto
+
+* The auto keyword specifies that the type of the variable that is being declared will be automatically deducted from its *initializer*. In case of functions, if their return type is auto then that will be evaluated by return type expression at runtime. 
+* 有的时候我们还会遇到这种情况，我们希望从表达式中推断出要定义变量的类型，但却不想用表达式的值去初始化变量。还有可能是函数的返回类型为某表达式的的值类型。在这些时候auto显得就无力了，所以C++11又引入了第二种类型说明符decltype，它的作用是选择并返回操作数的数据类型。在此过程中，编译器只是分析表达式并得到它的类型，却不进行实际的计算表达式的值。 
+
+[More](https://www.geeksforgeeks.org/type-inference-in-c-auto-and-decltype/). 
+[More More](https://blog.csdn.net/y1196645376/article/details/51441503)
+
+
+## Initialization and constructor
+
+i.e. 
+string s5 = "fadffda";		// copy initialization
+string s6("dfafad");		//direct initialization
+
+* List initialization:
+	* vector\<int> v1(10)
+
+
+## String
+
+* literal concatenation is not allowed: 
+	* string s = "fdaf" + "sdfad"; 	//error, at least one operand has to be a string type
+* For historical reasons, and for compatibility with C, string literals are not standard library `string`s
+* **Note**: string are mutatable in C++
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
