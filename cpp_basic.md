@@ -7,9 +7,9 @@
 		- [1.1.1 Reference](#reference)
 		- [1.1.2 Pointer](#Pointer)
 	- [1.2 Const Keyword](#const-keyword)
-		- [1.2.1 const pointer](#constPointer)
-		- [1.2.2 const expression](#constExpr)
-	- [1.3 Typedef](#typedef)
+		- [1.2.1 const pointer](#const-pointer-and-pointer-to-const)
+		- [1.2.2 const expression](#const-expression)
+	- [1.3 Typedef](#type-def)
 
 <!-- /TOC -->
 
