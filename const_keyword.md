@@ -1,4 +1,4 @@
-# Const
+# Const Keyword
 
 example: 
 int i = 43;
@@ -25,6 +25,21 @@ int &r2 = ci;   // error: non const reference to a const object.
 	* Text book explanation: In this case, ri is bound to a temporary object. A temporary object is an unnamed object created by the compiler when it needs a place to store a result from evaluating an expression. C++ programmers often use the word temporary as an abbreviation for temporary object. Now consider what could happen if this initialization were allowed but ri was not const. If ri weren’t const, we could assign to ri. Doing so would change the object to which ri is bound. That object is a temporary, not dval. The programmer who made ri refer to dval would probably expect that assigning to ri would change dval. After all, why assign to ri unless the intent is to change the object to which ri is bound? Because binding a reference to a temporary is almost surely not what the programmer intended, the language makes it illegal.
 	* 其实还算ok make sense，这就是为什么在function parameter里是const reference的话可以pass temporary variable
 
+## const pointer and pointer to const
+* pointer to const: 
+const int a = 10; 
+const int* ptr = &a;
+\*ptr = 5; // wrong! 
+ptr++; //right
+
+* const pointer:
+int a = 10;
+int \*const ptr = \&a;  
+\*ptr = 5; // right
+ptr++;    // wrong
+
+* 具体看const的位置在哪！
+
 ## const expression:
 const expression: A constant expression is an expression whose value cannot change and that can be evaluated at compile time. A literal is a constant expression. A const object that is initialized from a constant expression is also a constant expression.  
 
@@ -37,3 +52,14 @@ const int limit = max_files + 1; // limit is a constant expression.
 int staff_size = 27; // staff_size is not a constant expression. 
 const int sz = get_size(); // sz is not a constant expression. 
 Although staff_size is initialized from a literal, it is not a constant expression because it is a plain int, not a const int. On the other hand, even though sz is a const, the value of its initializer is not known until run time. Hence, sz is not a constant expression.
+
+
+
+
+const int \*p = nullptr; // p is a pointer to a const int. 
+constexpr int \*q = nullptr; // q is a const pointer to int. 
+Despite appearances, the types of p and q are quite different; p is a pointer to const, whereas q is a constant pointer. The difference is a consequence of the fact that constexpr imposes a top-level const
+
+
+
+

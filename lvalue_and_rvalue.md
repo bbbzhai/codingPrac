@@ -1,6 +1,6 @@
-# lvalue (reference) and rvalue (reference)
+## reference and pointer
 
-## lvalue reference (or simply reference)
+### lvalue reference (or simply reference)
 
 int ival = 1024;
 int &refVal = ival; // refVal is another name for ival
@@ -25,7 +25,7 @@ int &refVal2; //error: a reference must be **initialized**!
 [A good place to look at](https://www.ntu.edu.sg/home/ehchua/programming/cpp/cp4_PointerReference.html)
 
 
-## pointer
+### pointer
 
 * nullptr  //null pointer literal. 
 * advice: initialize all pointers. 
