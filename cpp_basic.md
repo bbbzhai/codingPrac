@@ -1,18 +1,17 @@
 # cpp basic
+<!-- TOC depthFrom:1 depthTo:2 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-<!-- MarkdownTOC -->
+- [C++ Basic](#cpp-basic)
+	- [1.0 Definition and Declaration](#definition--declaration)
+	- [1.1 Reference and Pointer](#reference-and-pointer)
+		- [1.1.1 Reference](#reference)
+		- [1.1.2 Pointer](#Pointer)
+	- [1.2 Const Keyword](#const-keyword)
+		- [1.2.1 const pointer](#const-pointer-and-pointer-to-const)
+		- [1.2.2 const expression](#const-expression)
+	- [1.3 Typedef](#type-def)
 
-- Definition & Declaration
-- reference and pointer
-	- reference
-	- pointer
-- Const Keyword
-	- const pointer and pointer to const
-	- const expression:
-- Type def
-
-<!-- /MarkdownTOC -->
-
+<!-- /TOC -->
 
 ## Definition & Declaration
 * A variable declaration: specifies the type and name of a variable. It makes a name known to the program. A file that wants to use a name defined elsewhere includes a declaration for that name.
