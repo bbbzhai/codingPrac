@@ -2,11 +2,11 @@
 <!-- TOC depthFrom:1 depthTo:2 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [C++ Basic](#cpp-basic)
-	- [1.0 Definition and Declaration](#Definition-&-Declaration)
-	- [1.1 Reference and Pointer](#11-overview)
+	- [1.0 Definition and Declaration](#definition--declaration)
+	- [1.1 Reference and Pointer](#reference-and-pointer)
 		- [1.1.1 Reference](#reference)
 		- [1.1.2 Pointer](#Pointer)
-	- [1.2 Const Keyword](#const)
+	- [1.2 Const Keyword](#const-keyword)
 		- [1.2.1 const pointer](#constPointer)
 		- [1.2.2 const expression](#constExpr)
 	- [1.3 Typedef](#typedef)
@@ -45,7 +45,7 @@ The reason for this distinction is you can't put the same variable in two differ
 
 ## reference and pointer
 
-### lvalue reference (or simply reference)
+### reference
 
 int ival = 1024;
 int &refVal = ival; // refVal is another name for ival
