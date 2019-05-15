@@ -2,7 +2,7 @@
 <!-- TOC depthFrom:1 depthTo:2 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [C++ Basic](#cpp-basic)
-	- [1.0 Definition and Declaration](#def_decl)
+	- [1.0 Definition and Declaration](#Definition-&-Declaration)
 	- [1.1 Reference and Pointer](#11-overview)
 		- [1.1.1 Reference](#reference)
 		- [1.1.2 Pointer](#Pointer)
