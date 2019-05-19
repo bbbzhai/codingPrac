@@ -167,7 +167,8 @@ Still don't understand fully, maybe will understand it in practice.
 * Difference between decltype and auto
 	* `auto` works on types, and `decltype` works on expression
 * You shouldn't be seeing or using decltype in "day-to-day" programming. It is most useful in generic (templated) library code, where the expression in question is not known and depends on a paramater. (By contrast, auto may be used generously all over the place.) In short, if you're new to programming, you probably won't need to use decltype for some time.
-
+* decltype give you an reference if the expression yields an lvalue
+	* assume p is an int\*. Because dereference yields an lvalue, decltype(\*p) is int&
 
 ### auto
 
@@ -185,7 +186,10 @@ string s5 = "fadffda";		// copy initialization
 string s6("dfafad");		//direct initialization
 
 * List initialization:
-	* vector\<int> v1(10)
+	* vector\<int> v1(10);		//v1 has ten elements with value 0
+	* vector\<int> v2{10};		//v2 has one element withe value 10
+	* vector\<int> v3(10, 1);	//v3 has 10 element with value 1
+	* vector\<int> v4{10, 1};	//v4 has two elements with values 10 and 1, *List initialization*
 
 
 ## String
@@ -195,6 +199,36 @@ string s6("dfafad");		//direct initialization
 * For historical reasons, and for compatibility with C, string literals are not standard library `string`s
 * **Note**: string are mutatable in C++
 
+## Vector
+* cbegin(): return const iterator
+
+### iterator violation
+
+## function
+
+local static object: 
+
+### pass by reference to const
+* auto find_char(const int &s) {//function definition}
+* 通常情况下都用reference to const, 因为这样的话，各种literal都可以pass，否则，literal/temporary variable不能转换成reference，[read](#const-keyword)
+
+### return reference
+* don't return a reference or pointer to a local object
+* reference return are lvalues
+	* other return type are rvalues
+
+### inline function
+* 没什么卵用
+
+### pointer to functions
+example: 
+* bool lengthCompare(const string &, const string &);
+* If we are to declare a pointer to such a function: bool (\*pf)(const string &, const string &); // uninitialized
+* useful in function parameter that requires functions such as compare
+* 这个还不是很熟
+
+## Class
+* Class provide member protection while struct members (by default) are all public. 
 
 
 
